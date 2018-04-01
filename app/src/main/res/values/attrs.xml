@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ 
+    <declare-styleable name="SettingCenterItem">
+
+        <!--
+             Should the layout be a column or a row?  Use "horizontal"
+             for a row, "vertical" for a column.  The default is
+             horizontal.
+        -->
+        <attr name="desc" format="string" />
+        <!-- 设置背景选择器 -->
+        <attr name="bgselector">
+            <enum name="first" value="0" />
+            <enum name="middle" value="1" />
+            <enum name="last" value="2" />
+        </attr>
+        <!-- 是否不显示开关 true 不显示 false显示 -->
+        <attr name="isdisabletoggle" format="boolean"></attr>
+    </declare-styleable>
+
+</resources>

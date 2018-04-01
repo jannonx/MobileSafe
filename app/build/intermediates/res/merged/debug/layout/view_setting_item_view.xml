@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rv_settingcenter_autoupdate"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dip"
+    android:paddingBottom="5dip"
+    android:paddingTop="5dip" >
+
+    <!-- 文本 -->
+
+    <TextView
+        android:id="@+id/tv_view_settingview_item_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textSize="18sp"
+        android:text="自动更新设置" />
+    <!-- 开关 -->
+
+    <ImageView
+        android:id="@+id/iv_view_settingview_item_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/off" />
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_bkg"
+        android:orientation="vertical" >
+
+        <!-- 标题 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/title_style"
+                android:background="#00000000"
+                android:text="缓存清理" />
+
+            <!-- 清理缓存的按钮 -->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dip"
+                android:onClick="clearCache"
+                android:src="@drawable/iv_clean_selector" />
+        </RelativeLayout>
+
+        <!-- 雷达 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- 雷达图片 -->
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dip" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_scanner_malware" />
+                <!-- 扇形 -->
+
+                <ImageView
+                    android:id="@+id/iv_cacheinfo_scanning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/act_scanning_03" />
+            </FrameLayout>
+            <!-- 扫描信息和进度 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_cacheinfo_scanappname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="正在扫描xxxxx"
+                    android:textColor="#ffffff" />
+
+                <ProgressBar
+                    android:id="@+id/pb_cacheinof_pb"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 缓存结果 -->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:id="@+id/ll_cacheinfo_result"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+        <!-- 没有缓存信息的显示 -->
+
+        <TextView
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:text="没有缓存"
+            android:id="@+id/tv_cacheinfo_nocache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+</LinearLayout>

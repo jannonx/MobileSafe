@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <TextView
+        style="@style/title_style"
+        android:text="软件管家" />
+
+    <!-- 内存信息 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 手机内存 -->
+
+        <com.itheima.mobilesafe13.view.TextProgressView
+            android:id="@+id/tpv_appmanager_rom_mess"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <!-- SD内存 -->
+
+        <com.itheima.mobilesafe13.view.TextProgressView
+            android:id="@+id/tpv_appmanager_sd_mess"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!-- ListView -->
+
+        <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+            android:id="@+id/lv_appmanager_viewdatas"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+       
+
+        <!-- 标签 -->
+
+      <!--   <TextView
+            android:id="@+id/tv_appmanager_lvtag"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff888888"
+            android:text="用户软件(3)"
+            android:textColor="#ffffffff"
+            android:visibility="gone" /> -->
+        <!-- 进度条 -->
+
+        <include layout="@layout/progressbar_circle" />
+    </FrameLayout>
+
+</LinearLayout>

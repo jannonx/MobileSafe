@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:itheima="http://schemas.android.com/apk/res/com.itheima.mobilesafe13"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题头 -->
+
+    <TextView
+        style="@style/title_style"
+        android:text="设置中心" />
+    <!-- 自动更新 -->
+
+    <com.itheima.mobilesafe13.view.SettingCenterItem
+        android:id="@+id/sci_settingcenter_autoupdate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        itheima:bgselector="first"
+        itheima:desc="自动更新服务" />
+    <!-- 黑名单拦截 -->
+
+    <com.itheima.mobilesafe13.view.SettingCenterItem
+        android:id="@+id/sci_settingcenter_blackintercept"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        itheima:bgselector="last"
+        itheima:desc="黑名单拦截服务" />
+
+    <!-- 电话归属地 -->
+
+    <com.itheima.mobilesafe13.view.SettingCenterItem
+        android:id="@+id/sci_settingcenter_showlocation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dip"
+        itheima:bgselector="first"
+        itheima:desc="来电显示归属地服务" />
+
+    <!-- 归属地样式 -->
+
+    <com.itheima.mobilesafe13.view.SettingCenterItem
+        android:id="@+id/sci_settingcenter_locationstyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        itheima:bgselector="last"
+        itheima:isdisabletoggle="true"
+        itheima:desc="归属地样式(默认样式)" />
+
+  
+
+</LinearLayout>

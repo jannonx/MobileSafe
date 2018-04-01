@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- task图标 -->
+
+    <ImageView
+        android:id="@+id/iv_item_cacheinfo_lv_icon"
+        android:layout_width="35dip"
+        android:layout_height="35dip"
+        android:layout_margin="5dip"
+        android:src="@drawable/sjfd" />
+
+    <!-- task名字和安装位置 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dip"
+        android:layout_toRightOf="@id/iv_item_cacheinfo_lv_icon"
+        android:orientation="vertical" >
+
+        <!-- task名字 -->
+
+        <TextView
+            android:id="@+id/tv_item_cacheinfo_lv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="软件管家"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- 占用大小 -->
+
+    <TextView
+        android:id="@+id/tv_item_cacheinfo_cachesize"
+        android:layout_width="35dip"
+        android:layout_height="35dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dip"
+        android:src="@drawable/check_status_green" />
+
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <TextView
+        style="@style/title_style"
+        android:text="手机防盗" />
+
+    <!-- 显示安全号码 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_btn_selector" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="安全号码"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv_lostfind_safenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="11111"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+    <!-- 防盗保护是否开启 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_btn_selector"
+            android:gravity="center_vertical"
+            android:text="防盗保护是否开启"
+            android:textColor="#ffffff" />
+
+        <!-- 标记是否绑定sim卡的图标 -->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:src="@drawable/lock" />
+    </RelativeLayout>
+    <!-- 重新进入设置向导界面 -->
+
+    <TextView
+        
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_btn_selector"
+        android:clickable="true"
+        android:onClick="enterSetup1"
+        android:gravity="center_vertical"
+        android:text="重新进入设置向导界面"
+        android:textColor="#ffffff" />
+
+    <!-- 4个功能描述信息 -->
+
+    <TextView
+        style="@style/lostfind_desc_style"
+        android:text="sim卡变更报警" />
+
+    <TextView
+        style="@style/lostfind_desc_style"
+        android:layout_margin="5dip"
+        android:text="GPS追踪#*gps*#" />
+
+    <TextView
+        style="@style/lostfind_desc_style"
+        android:text="远程锁屏#*lockscreen*#" />
+
+    <TextView
+        style="@style/lostfind_desc_style"
+        android:text="远程清除数据#*wipedata*#" />
+
+    <TextView
+        style="@style/lostfind_desc_style"
+        android:text="播放报警音乐#*music*#" />
+
+</LinearLayout>

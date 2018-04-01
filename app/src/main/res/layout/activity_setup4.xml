@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <TextView
+        style="@style/title_style"
+        android:text="4.恭喜您，设置完成" />
+
+    <!-- 防盗是否开启的复选框 -->
+
+    <CheckBox
+        android:id="@+id/cb_setup4_isopenlostfind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打钩开启防盗保护" >
+    </CheckBox>
+    <!-- 描述信息 -->
+
+    <TextView
+        android:id="@+id/tv_setup4_showstate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:text="防盗保护已经关闭" />
+
+    <!-- 线性布局 显示四个点 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <!-- 默认点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:background="@android:drawable/presence_invisible" >
+        </View>
+
+        <!-- 默认点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:background="@android:drawable/presence_invisible" >
+        </View>
+        <!-- 默认点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:background="@android:drawable/presence_invisible" >
+        </View>
+        <!-- 选中点 -->
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:background="@android:drawable/presence_online" />
+    </LinearLayout>
+
+    <!-- 相对布局 显示图片和按钮 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/step_4" />
+
+        <!-- 下一个 按钮 -->
+
+        <ImageView
+            android:layout_width="60dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/dialog_btn_selector"
+            android:onClick="nextPage"
+            android:src="@drawable/next" />
+        <!-- 上一个 按钮 -->
+
+        <ImageView
+            android:layout_width="60dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/dialog_btn_selector"
+            android:onClick="prevPage"
+            android:src="@drawable/pre" />
+    </RelativeLayout>
+
+</LinearLayout>

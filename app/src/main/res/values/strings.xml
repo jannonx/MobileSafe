@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MobileSafe13</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="sample_device_admin_description">不开启 手机丢了不好找</string>
+	<string name="sample_device_admin">手机卫士</string>
+	<string name="accessibility_service_label">看门狗</string>
+	<string name="accessibility_service_description">打开此服务来完成看门狗的监控</string>
+
+</resources>

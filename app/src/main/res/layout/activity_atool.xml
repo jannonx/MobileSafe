@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:itheima="http://schemas.android.com/apk/res/com.itheima.mobilesafe13"
+     xmlns:custom="http://schemas.android.com/apk/res/com.itheima.mobilesafe13"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <TextView
+        style="@style/title_style"
+        android:text="高级工具" />
+
+    <com.itheima.mobilesafe13.view.SettingCenterItem
+        android:id="@+id/sci_atool_mobilephone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        itheima:bgselector="first"
+        itheima:desc="电话归属地查询"
+        itheima:isdisabletoggle="true" />
+
+    <com.itheima.mobilesafe13.view.SettingCenterItem
+        android:id="@+id/sci_atool_servicephone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        itheima:bgselector="last"
+        itheima:desc="服务号码查询"
+        itheima:isdisabletoggle="true" />
+
+    <!-- 短信的备份和还原 -->
+
+<!--备份  -->
+    <com.itheima.mobilesafe13.view.SettingCenterItem
+        android:id="@+id/sci_atool_smsbaike"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        itheima:bgselector="first"
+        itheima:desc="短信的备份"
+        itheima:isdisabletoggle="true" />
+    <!-- 还原 -->
+ <com.itheima.mobilesafe13.view.SettingCenterItem
+        android:id="@+id/sci_atool_smsrestore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        itheima:bgselector="last"
+        itheima:desc="短信的还原"
+        itheima:isdisabletoggle="true" />
+ 
+ <!-- 备份进度显示  -->
+
+  <com.daimajia.numberprogressbar.NumberProgressBar
+      android:id="@+id/npb_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+  
+            custom:progress_unreached_color="#CCCCCC"
+            custom:progress_reached_color="#3498DB"
+
+            custom:progress_unreached_bar_height="0.75dp"
+            itheima:progress_reached_bar_height="1.5dp"
+
+            itheima:progress_text_size="10sp"
+            itheima:progress_text_color="#3498DB"
+            itheima:progress_text_offset="1dp"
+            itheima:progress_text_visibility="visible"
+
+            itheima:progress_max="100"
+            custom:progress_current="80"
+             />
+  
+  <!-- 程序锁 -->
+  <com.itheima.mobilesafe13.view.SettingCenterItem
+        android:layout_marginTop="5dip"
+        android:id="@+id/sci_atool_applock"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        itheima:bgselector="first"
+        itheima:desc="程序锁"
+        itheima:isdisabletoggle="true" />
+   <com.itheima.mobilesafe13.view.SettingCenterItem
+        android:id="@+id/sci_atool_watchdog1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        itheima:bgselector="middle"
+        itheima:desc="看门狗(accessibilty)"
+        />
+    <com.itheima.mobilesafe13.view.SettingCenterItem
+        android:id="@+id/sci_atool_watchdog2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        itheima:bgselector="last"
+        itheima:desc="看门狗2"
+        />
+
+</LinearLayout>
